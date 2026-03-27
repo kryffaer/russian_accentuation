@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расстановка ударений в русском языке</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Расстановка ударений в русском языке</h1>
+            <p>Вставьте текст в поле ниже, и программа автоматически расставит ударения</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="input-text">Исходный текст:</label>
+                <textarea id="input-text" rows="8" placeholder="Введите текст на русском языке..."></textarea>
+            </div>
+
+            <div class="controls">
+                <button id="accent-btn" class="btn-primary">Расставить ударения</button>
+                <button id="clear-btn" class="btn-secondary">Очистить</button>
+                <button id="copy-btn" class="btn-secondary">Копировать результат</button>
+            </div>
+
+            <div class="output-section">
+                <label>Текст с ударениями:</label>
+                <div id="output-text" class="output-area"></div>
+            </div>
+
+            <div class="status">
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <span>Загрузка словаря (124 MB)...</span>
+                </div>
+                <div id="stats" class="stats hidden"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Словарь содержит 638 365 словоформ | Ударения выделяются красным цветом</p>
+        </footer>
+    </div>
+
+    <script src="js/dictionary.js"></script>
+    <script src="js/tokenizer.js"></script>
+    <script src="js/accentCore.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
